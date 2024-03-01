@@ -104,6 +104,7 @@ a{
 .mobileNavbarLink{
     color: white;
     font-size: 1.4rem;
+    font-weight: 500;
 }
 
 /* ------------- HOME SECTION ------------- */
@@ -187,6 +188,26 @@ a{
     text-align: center;
     font-size: 1.3rem;
     font-weight: 500;
+}
+
+.proyectDetail{
+    position: fixed;
+}
+
+.proyectImageDetail{
+    
+}
+
+.proyectTitleDetail{
+
+}
+
+.proyectLinks{
+    
+}
+
+.proyectLink{
+
 }
 
 /* ------------- ABOUT ME SECTION ------------- */
