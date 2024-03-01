@@ -34,6 +34,20 @@ a{
     text-decoration: none;
 }
 
+/* --------------------------- HEADER --------------------------- */
+
+.headerNavbar{
+    display: none;
+}
+
+.movileNavbarButton{
+    border: 1px solid red;
+}
+
+.fa-bars-staggered{
+    
+}
+
 /* --------------------------- MAIN --------------------------- */
 
 /* ------------- HOME SECTION ------------- */
@@ -225,29 +239,67 @@ a{
     padding: 30px;
     border-radius: 10px;
     color: white;
-    box-shadow: 0px 0px 14px 1px rgba(254,190,144,0.75);
+    box-shadow: 0px 0px 14px 0px rgba(254,190,144,0.75);
 }
 
 .formInput{
     width: 100%;
-    margin-bottom: 15px;
-    background-color: rgba(84, 0, 95, 0.7);
-    border: 4px solid rgba(72, 0, 82, 0.7);
+    margin-bottom: 20px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgba(255,189,144,1);
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 3px;
     font-size: 1rem;
+    outline: none;
+    transition: all .5s;
+    color: white;
+}
+
+.formInput:focus{
+    box-shadow: 0px 0px 14px 0px rgba(254,190,144,0.75);
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    transition: all .5s;
 }
 
 .contactFormSubmitButton{
     background: linear-gradient(to right, rgba(255,189,144,1), rgba(223,26,116,1), rgba(93,3,159,1));
     color: white;
-    border: 2px solid white;
+    border: none;
     border-radius: 10px;
     padding: 10px 30px;
     font-size: 1rem;
     font-weight: 600;
     transition: all .5s;
+    margin-top: 20px;
+}
 
+/* --------------------------- FOOTER --------------------------- */
+
+footer{
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    color: white;
+    padding: 30px 10px;
+    box-shadow: 0px 0px 14px 3px rgba(254,190,144,0.75);
+}
+
+.footerCopyright{
+    font-size: .9rem;
+    margin-bottom: 10px;
+}
+
+.footerPortfolioLink{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.portfolioLink{
+    font-weight: 600;
+    background: linear-gradient(to right, rgba(255,189,144,1), rgba(223,26,116,1), rgba(93,3,159,1));
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
 }
 
 /* --------------------------- KEYFRAMES --------------------------- */
