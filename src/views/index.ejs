@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="/js/mobileNavbar.js" defer></script>
+    <script src="/js/proyectDetail.js" defer></script>
 </head>
 <body>
     <header>
@@ -52,11 +53,16 @@
             <h3 class="sectionTitle">Proyects</h3>
 
             <div class="proyectsContainer">
-                <div class="proyectContainer">
+                <div class="proyectContainer" id="swProyectContainer">
                     <img class="proyectImage" src="/img/sw-mockup.webp" alt="SW Asistencia Virtual mockup">
+
                     <h4 class="proyectTitle">SW Asistencia Virtual</h4>
 
                     <div class="proyectDetail" id="swProyectDetail">
+                        <button class="closeProyectDetailButton">
+                            <i class="fa-solid fa-square-xmark"></i>
+                        </button>
+
                         <img class="proyectImageDetail" src="/img/sw-mockup.webp" alt="SW Asistencia Virtual mockup">
                         <h4 class="proyectTitleDetail">SW Asistencia Virtual</h4>
 
@@ -67,9 +73,22 @@
                     </div>
                 </div>
 
-                <div class="proyectContainer">
+                <div class="proyectContainer" id="clothingEcommerceContainer">
                     <img class="proyectImage" src="/img/ecommerce-mockup.webp" alt="Clothing e-commerce mockup">
                     <h4 class="proyectTitle">Clothing e-commerce</h4>
+
+                    <div class="proyectDetail" id="clothingEcommerceProyectDetail">
+                        <button class="closeProyectDetailButton">
+                            <i class="fa-solid fa-square-xmark"></i>
+                        </button>
+
+                        <img class="proyectImageDetail" src="/img/ecommerce-mockup.webp" alt="Clothing e-commerce mockup">
+                        <h4 class="proyectTitleDetail">Clothing e-commerce</h4>
+
+                        <div class="proyectLinks">
+                            <a class="proyectLink" href="https://github.com/leandroheffes24/digitalhouse-ecommerce"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
