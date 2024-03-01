@@ -34,21 +34,77 @@ a{
     text-decoration: none;
 }
 
+.display-block{
+    display: block !important;
+}
+
+.display-none{
+    display: none !important;
+}
+
 /* --------------------------- HEADER --------------------------- */
 
 .headerNavbar{
     display: none;
 }
 
-.movileNavbarButton{
-    border: 1px solid red;
+.mobileNavbarButton{
+    border: none;
+    background: none;
+    position: absolute;
+}
+
+.closeMobileNavbarButton{
+    border: none;
+    background: none;
 }
 
 .fa-bars-staggered{
-    
+    font-size: 3rem;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    color: rgba(255,189,144,1);
+    text-shadow: 0px 0px 10px rgba(255,189,144,1);
+}
+
+.fa-xmark{
+    font-size: 3rem;
+    color: rgba(255,189,144,1);
+    text-shadow: 0px 0px 10px rgba(255,189,144,1);
+    margin-top: 50px;
 }
 
 /* --------------------------- MAIN --------------------------- */
+
+/* ------------- MOBILE NAVBAR ------------- */
+
+.mobileNavbar{
+    display: none;
+    width: 60%;
+    height: 100vh;
+    background-color: rgba(159, 32, 209, 0.950);
+    backdrop-filter: blur(10px);
+    padding-top: 50px;
+    z-index: 20;
+    position: fixed;
+    right: 0;
+    box-shadow: -200px 0px 10px 10px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.mobileNavbarUnorderList{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobileNavbarLink{
+    color: white;
+    font-size: 1.4rem;
+}
 
 /* ------------- HOME SECTION ------------- */
 
