@@ -416,6 +416,335 @@ footer{
 	-webkit-background-clip: text;
 }
 
+/* --------------------------- MEDIA QUERIES --------------------------- */
+
+@media (width >= 768px) {
+/* -------------- GENERAL -------------- */
+
+.sectionTitle{
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+/* -------------- HEADER -------------- */
+
+.fa-bars-staggered{
+    font-size: 4rem;
+}
+
+.fa-xmark{
+    font-size: 4rem;
+    margin-top: 60px;
+}
+
+/* -------------- MAIN -------------- */
+
+/* MOBILE NAVBAR */
+
+.mobileNavbar{
+    padding: 60px 0;
+}
+
+.mobileNavbarUnorderList{
+    gap: 40px;
+}
+
+.mobileNavbarLink{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/* HOME SECTION */
+
+.homeSection{
+    height: 100vh;
+}
+
+.homeInformation{
+    bottom: 15%;
+}
+
+.homeTItle{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.homeSubtitle{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.cvButton{
+    padding: 15px 50px;
+}
+
+.cvLink{
+    font-size: 1.5rem;
+}
+
+/* PROYECTS SECTION */
+
+.proyectsSection{
+    padding: 40px 20px;
+}
+
+.proyectsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.proyectContainer{
+    width: 300px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+.proyectContainer:hover{
+    box-shadow: 0px 0px 14px 3px rgba(254,190,144,0.75);
+    transition: all .5s;
+}
+
+.proyectImage{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.proyectTitle{
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.proyectDetail{
+    display: none;
+    position: fixed;
+    width: 80%; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(20, 20, 20);
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 200px rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+.closeProyectDetailButton{
+    background: none;
+    border: none;
+    color: rgb(75, 75, 75);
+    font-size: 1.5rem;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.proyectImageDetail{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.proyectTitleDetail{
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 20px 0;
+}
+
+.proyectLinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.proyectLink{
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, rgba(255,189,144,1) 0%, rgba(93,3,159,1) 100%);
+    color: white;
+    padding: 3px 30px;
+    border-radius: 10px;
+}
+
+/* ------------- ABOUT ME SECTION ------------- */
+
+.aboutMeSection{
+    padding: 40px 20px;
+}
+
+.aboutMeContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.aboutMeImageAndInfoContainer{
+    width: 100%;
+}
+
+.aboutMeImage{
+    width: 100%;
+}
+
+.aboutMeInfoContainer{
+    background: linear-gradient(90deg, rgba(66,66,66,1) 0%, rgba(31,31,31,1) 100%);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.aboutMeInfoContainer>p{
+    color: white;
+    line-height: 1.5rem;
+    font-weight: 600;
+}
+
+.aboutMeCardsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+
+.aboutMeCard{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(50,50,50,0.8) 0%, rgba(0,0,0,0.8) 100%);
+    padding: 30px 10px;
+    border-radius: 20px;
+    width: 100%;
+    view-timeline-name: --card;
+    view-timeline-axis: block;
+    animation-timeline: --card;
+    animation-name: show;
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
+}
+
+.aboutMeCertificateCard{
+    border: 4px solid #ddbe66;
+}
+
+.aboutMeExperienceCard{
+    border: 4px solid #9bfb92;
+}
+
+.aboutMeSatisfiedCustomersCard{
+    border: 4px solid rgb(24, 132, 255);
+}
+
+.aboutMeCardIcon{
+    width: 30%;
+    text-align: center;
+    font-size: 2.3rem;
+}
+
+.fa-medal{
+    color: #ddbe66;
+}
+
+.fa-flask{
+    color: #9bfb92;
+}
+
+.fa-face-smile-beam{
+    color: rgb(24, 132, 255);
+}
+
+.aboutMeCardInfo{
+    width: 70%;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* ------------- CONTACT SECTION ------------- */
+
+.contactSection{
+    padding: 40px 20px;
+}
+
+.contactFormContainer{
+
+}
+
+.contactForm{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 0px 14px 0px rgba(254,190,144,0.75);
+}
+
+.formInput{
+    width: 100%;
+    margin-bottom: 20px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgba(255,189,144,1);
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 1rem;
+    outline: none;
+    transition: all .5s;
+    color: white;
+}
+
+.formInput:focus{
+    box-shadow: 0px 0px 14px 0px rgba(254,190,144,0.75);
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+.contactFormSubmitButton{
+    background: linear-gradient(to right, rgba(255,189,144,1), rgba(223,26,116,1), rgba(93,3,159,1));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all .5s;
+    margin-top: 20px;
+}
+
+/* --------------------------- FOOTER --------------------------- */
+
+footer{
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    color: white;
+    padding: 30px 10px;
+    box-shadow: 0px 0px 14px 3px rgba(254,190,144,0.75);
+}
+
+.footerCopyright{
+    font-size: .9rem;
+    margin-bottom: 10px;
+}
+
+.footerPortfolioLink{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.portfolioLink{
+    font-weight: 600;
+    background: linear-gradient(to right, rgba(255,189,144,1), rgba(223,26,116,1), rgba(93,3,159,1));
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+}
+
 /* --------------------------- KEYFRAMES --------------------------- */
 
 @keyframes show {
