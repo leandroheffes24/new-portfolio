@@ -29,10 +29,10 @@
     <main>
         <nav class="mobileNavbar">
             <ul class="mobileNavbarUnorderList">
-                <li><a class="mobileNavbarLink" id="mobileNavbarLink1" href="#homeSection">Home</a></li>
-                <li><a class="mobileNavbarLink" id="mobileNavbarLink2" href="#proyectsSection">Proyects</a></li>
-                <li><a class="mobileNavbarLink" id="mobileNavbarLink3" href="#aboutMeSection">About me</a></li>
-                <li><a class="mobileNavbarLink" id="mobileNavbarLink4" href="#contactSection">Contact</a></li>
+                <li><a class="mobileNavbarLink" href="#homeSection">Home</a></li>
+                <li><a class="mobileNavbarLink" href="#proyectsSection">Proyects</a></li>
+                <li><a class="mobileNavbarLink" href="#aboutMeSection">About me</a></li>
+                <li><a class="mobileNavbarLink" href="#contactSection">Contact</a></li>
             </ul>
 
             <button class="closeMobileNavbarButton">
@@ -120,6 +120,16 @@
                         <i class="fa-solid fa-face-smile-beam aboutMeCardIcon"></i>
                         <p class="aboutMeCardInfo">100% satisfied customers</p>
                     </div>
+
+                    <div class="aboutMeQualityCard aboutMeCard">
+                        <i class="fa-solid fa-star aboutMeCardIcon"></i>
+                        <p class="aboutMeCardInfo">Best web app quality</p>
+                    </div>
+
+                    <div class="aboutMeDeliveryTimeCard aboutMeCard">
+                        <i class="fa-solid fa-truck-fast aboutMeCardIcon"></i>
+                        <p class="aboutMeCardInfo">Fast delivery time</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -129,9 +139,9 @@
 
             <div class="contactFormContainer">
                 <form class="contactForm" action="">
-                    <input class="formInput" type="text" name="name" placeholder="Name">
-                    <input class="formInput" type="email" name="email" placeholder="Email">
-                    <textarea class="formInput" name="message" id="message" cols="30" rows="7" placeholder="Your message"></textarea>
+                    <input class="formInput" type="text" name="name" placeholder="Name" maxlength="40">
+                    <input class="formInput" type="email" name="email" placeholder="Email" maxlength="70">
+                    <textarea class="formInput" name="message" id="message" cols="30" rows="7" placeholder="Your message" maxlength="300"></textarea>
                     <button class="contactFormSubmitButton" type="submit">Submit</button>
                 </form>
             </div>

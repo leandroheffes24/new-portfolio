@@ -313,10 +313,12 @@ a{
     border: 4px solid rgb(24, 132, 255);
 }
 
-.aboutMeCardIcon{
-    width: 30%;
-    text-align: center;
-    font-size: 2.3rem;
+.aboutMeQualityCard{
+    border: 4px solid rgb(229, 124, 255);
+}
+
+.aboutMeDeliveryTimeCard{
+    border: 4px solid rgb(133, 220, 255);
 }
 
 .fa-medal{
@@ -331,6 +333,20 @@ a{
     color: rgb(24, 132, 255);
 }
 
+.fa-star{
+    color: rgb(229, 124, 255);
+}
+
+.fa-truck-fast{
+    color: rgb(133, 220, 255);
+}
+
+.aboutMeCardIcon{
+    width: 30%;
+    text-align: center;
+    font-size: 2.3rem;
+}
+
 .aboutMeCardInfo{
     width: 70%;
     color: white;
@@ -342,10 +358,6 @@ a{
 
 .contactSection{
     padding: 40px 20px;
-}
-
-.contactFormContainer{
-
 }
 
 .contactForm{
@@ -417,6 +429,8 @@ footer{
 }
 
 /* --------------------------- MEDIA QUERIES --------------------------- */
+
+/* --------------------------- TABLET VIEW --------------------------- */
 
 @media (width >= 768px) {
 /* -------------- GENERAL -------------- */
@@ -493,86 +507,42 @@ footer{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-between;
 }
 
 .proyectContainer{
-    width: 300px;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    transition: all .5s;
-}
-
-.proyectContainer:hover{
-    box-shadow: 0px 0px 14px 3px rgba(254,190,144,0.75);
-    transition: all .5s;
-}
-
-.proyectImage{
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border-radius: 10px;
+    width: 340px;
+    margin: 0;
 }
 
 .proyectTitle{
-    color: white;
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 1.4rem;
 }
 
 .proyectDetail{
-    display: none;
-    position: fixed;
-    width: 80%; 
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(20, 20, 20);
-    padding: 40px 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 0px 200px rgba(0, 0, 0, 0.6);
-    z-index: 5;
+    width: 60%;
+    padding: 60px 20px 40px;
+    box-shadow: 0px 0px 0px 400px rgba(0, 0, 0, 0.6);
 }
 
 .closeProyectDetailButton{
-    background: none;
-    border: none;
-    color: rgb(75, 75, 75);
-    font-size: 1.5rem;
-    position: absolute;
-    top: 5px;
-    right: 10px;
-}
-
-.proyectImageDetail{
-    width: 100%;
-    border-radius: 10px;
+    font-size: 2rem;
+    top: 10px;
+    right: 15px;
 }
 
 .proyectTitleDetail{
-    color: white;
-    text-align: center;
-    font-size: 1.3rem;
-    margin: 20px 0;
+    font-size: 1.5rem;
+    margin: 30px 0;
 }
 
 .proyectLinks{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    gap: 50px;
 }
 
 .proyectLink{
-    font-size: 1.5rem;
-    background: linear-gradient(90deg, rgba(255,189,144,1) 0%, rgba(93,3,159,1) 100%);
-    color: white;
-    padding: 3px 30px;
-    border-radius: 10px;
+    font-size: 1.7rem;
+    padding: 3px 40px;
 }
 
 /* ------------- ABOUT ME SECTION ------------- */
@@ -582,51 +552,31 @@ footer{
 }
 
 .aboutMeContainer{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    gap: 0;
 }
 
 .aboutMeImageAndInfoContainer{
-    width: 100%;
-}
-
-.aboutMeImage{
-    width: 100%;
+    width: 40%;
 }
 
 .aboutMeInfoContainer{
-    background: linear-gradient(90deg, rgba(66,66,66,1) 0%, rgba(31,31,31,1) 100%);
     padding: 10px;
-    border-radius: 20px;
 }
 
 .aboutMeInfoContainer>p{
-    color: white;
-    line-height: 1.5rem;
-    font-weight: 600;
+    font-size: .9rem;
+    line-height: 1.3rem;
+    font-weight: 500;
 }
 
 .aboutMeCardsContainer{
-    display: flex;
-    flex-wrap: wrap;
+    width: 60%;
+    padding-left: 40px;
     gap: 3px;
 }
 
 .aboutMeCard{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    background: linear-gradient(90deg, rgba(50,50,50,0.8) 0%, rgba(0,0,0,0.8) 100%);
-    padding: 30px 10px;
-    border-radius: 20px;
-    width: 100%;
-    view-timeline-name: --card;
-    view-timeline-axis: block;
-    animation-timeline: --card;
-    animation-name: show;
-    animation-range: entry 25% cover 30%;
-    animation-fill-mode: both;
+    padding: 0;
 }
 
 .aboutMeCertificateCard{
@@ -641,10 +591,12 @@ footer{
     border: 4px solid rgb(24, 132, 255);
 }
 
-.aboutMeCardIcon{
-    width: 30%;
-    text-align: center;
-    font-size: 2.3rem;
+.aboutMeQualityCard{
+    border: 4px solid rgb(229, 124, 255);
+}
+
+.aboutMeDeliveryTimeCard{
+    border: 4px solid rgb(133, 220, 255);
 }
 
 .fa-medal{
@@ -659,89 +611,61 @@ footer{
     color: rgb(24, 132, 255);
 }
 
+.fa-star{
+    color: rgb(229, 124, 255);
+}
+
+.fa-truck-fast{
+    color: rgb(133, 220, 255);
+}
+
+
+.aboutMeCardIcon{
+    font-size: 2.2rem;
+}
+
 .aboutMeCardInfo{
-    width: 70%;
-    color: white;
     font-size: 1.1rem;
-    font-weight: 500;
 }
 
 /* ------------- CONTACT SECTION ------------- */
 
 .contactSection{
     padding: 40px 20px;
-}
-
-.contactFormContainer{
-
+    border: 1px solid red;
 }
 
 .contactForm{
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 30px;
-    border-radius: 10px;
-    color: white;
-    box-shadow: 0px 0px 14px 0px rgba(254,190,144,0.75);
+    padding: 50px;
+    width: 80%;
+    margin: auto;
 }
 
 .formInput{
-    width: 100%;
-    margin-bottom: 20px;
-    background: none;
-    border: none;
-    border-bottom: 2px solid rgba(255,189,144,1);
-    padding: 10px;
-    border-radius: 3px;
-    font-size: 1rem;
-    outline: none;
-    transition: all .5s;
-    color: white;
-}
-
-.formInput:focus{
-    box-shadow: 0px 0px 14px 0px rgba(254,190,144,0.75);
-    border-bottom: 2px solid rgba(0, 0, 0, 0);
-    border-radius: 10px;
-    transition: all .5s;
+    margin-bottom: 30px;
+    padding: 15px;
+    font-size: 1.1rem;
 }
 
 .contactFormSubmitButton{
-    background: linear-gradient(to right, rgba(255,189,144,1), rgba(223,26,116,1), rgba(93,3,159,1));
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: all .5s;
-    margin-top: 20px;
+    padding: 10px 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 /* --------------------------- FOOTER --------------------------- */
 
 footer{
-    background-color: rgba(0, 0, 0, 0.8);
-    text-align: center;
-    color: white;
-    padding: 30px 10px;
-    box-shadow: 0px 0px 14px 3px rgba(254,190,144,0.75);
+    padding: 20px 0px;
 }
 
 .footerCopyright{
-    font-size: .9rem;
-    margin-bottom: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
 }
 
 .footerPortfolioLink{
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-.portfolioLink{
-    font-weight: 600;
-    background: linear-gradient(to right, rgba(255,189,144,1), rgba(223,26,116,1), rgba(93,3,159,1));
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
+    font-size: 1.2rem;
 }
 }
 
