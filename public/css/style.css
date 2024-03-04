@@ -223,6 +223,7 @@ a{
 .proyectImageDetail{
     width: 100%;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .proyectTitleDetail{
@@ -414,6 +415,7 @@ footer{
 .footerCopyright{
     font-size: .9rem;
     margin-bottom: 10px;
+    color: rgb(165, 165, 165);
 }
 
 .footerPortfolioLink{
@@ -577,36 +579,12 @@ footer{
     padding: 0;
 }
 
-.aboutMeCertificateCard{
-    border: 4px solid #ddbe66;
-}
-
-.aboutMeExperienceCard{
-    border: 4px solid #9bfb92;
-}
-
-.aboutMeSatisfiedCustomersCard{
-    border: 4px solid rgb(24, 132, 255);
-}
-
 .aboutMeQualityCard{
     border: 4px solid rgb(229, 124, 255);
 }
 
 .aboutMeDeliveryTimeCard{
     border: 4px solid rgb(133, 220, 255);
-}
-
-.fa-medal{
-    color: #ddbe66;
-}
-
-.fa-flask{
-    color: #9bfb92;
-}
-
-.fa-face-smile-beam{
-    color: rgb(24, 132, 255);
 }
 
 .fa-star{
@@ -616,7 +594,6 @@ footer{
 .fa-truck-fast{
     color: rgb(133, 220, 255);
 }
-
 
 .aboutMeCardIcon{
     font-size: 2.2rem;
@@ -630,7 +607,6 @@ footer{
 
 .contactSection{
     padding: 40px 20px;
-    border: 1px solid red;
 }
 
 .contactForm{
@@ -739,13 +715,11 @@ header{
 /* PROYECTS SECTION */
 
 .proyectsSection{
-    border: 1px solid red;
     padding: 40px 40px;
 }
 
 .proyectsContainer{
     gap: 20px;
-    border: 1px solid blue;
 }
 
 .proyectContainer{
@@ -761,210 +735,81 @@ header{
 }
 
 .proyectDetail{
-    width: 60%;
+    width: 50%;
     padding: 60px 20px 40px;
-    box-shadow: 0px 0px 0px 400px rgba(0, 0, 0, 0.6);
 }
 
 .closeProyectDetailButton{
-    font-size: 2rem;
-    top: 10px;
-    right: 15px;
+    cursor: pointer;
+}
+
+.proyectImageDetail{
+    height: 200px;
 }
 
 .proyectTitleDetail{
     font-size: 1.5rem;
-    margin: 30px 0;
-}
-
-.proyectLinks{
-    gap: 50px;
+    margin: 20px 0;
 }
 
 .proyectLink{
-    font-size: 1.7rem;
-    padding: 3px 40px;
+    font-size: 1.5rem;
+    padding: 3px 30px;
 }
 
 /* ABOUT ME SECTION */
 
 .aboutMeSection{
-    padding: 40px 20px;
-}
-
-.aboutMeContainer{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.aboutMeImageAndInfoContainer{
-    width: 100%;
-}
-
-.aboutMeImage{
-    width: 100%;
+    padding: 40px 40px;
 }
 
 .aboutMeInfoContainer{
-    background: linear-gradient(90deg, rgba(66,66,66,1) 0%, rgba(31,31,31,1) 100%);
-    padding: 10px;
-    border-radius: 20px;
+    padding: 15px;
 }
 
 .aboutMeInfoContainer>p{
-    color: white;
-    line-height: 1.5rem;
-    font-weight: 600;
+    font-size: 1rem;
 }
 
 .aboutMeCardsContainer{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3px;
-}
-
-.aboutMeCard{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    background: linear-gradient(90deg, rgba(50,50,50,0.8) 0%, rgba(0,0,0,0.8) 100%);
-    padding: 30px 10px;
-    border-radius: 20px;
-    width: 100%;
-    view-timeline-name: --card;
-    view-timeline-axis: block;
-    animation-timeline: --card;
-    animation-name: show;
-    animation-range: entry 25% cover 30%;
-    animation-fill-mode: both;
-}
-
-.aboutMeCertificateCard{
-    border: 4px solid #ddbe66;
-}
-
-.aboutMeExperienceCard{
-    border: 4px solid #9bfb92;
-}
-
-.aboutMeSatisfiedCustomersCard{
-    border: 4px solid rgb(24, 132, 255);
-}
-
-.aboutMeQualityCard{
-    border: 4px solid rgb(229, 124, 255);
-}
-
-.aboutMeDeliveryTimeCard{
-    border: 4px solid rgb(133, 220, 255);
-}
-
-.fa-medal{
-    color: #ddbe66;
-}
-
-.fa-flask{
-    color: #9bfb92;
-}
-
-.fa-face-smile-beam{
-    color: rgb(24, 132, 255);
-}
-
-.fa-star{
-    color: rgb(229, 124, 255);
-}
-
-.fa-truck-fast{
-    color: rgb(133, 220, 255);
-}
-
-.aboutMeCardIcon{
-    width: 30%;
-    text-align: center;
-    font-size: 2.3rem;
-}
-
-.aboutMeCardInfo{
-    width: 70%;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 500;
+    padding-left: 60px;
+    gap: 10px;
 }
 
 /* CONTACT SECTION */
 
 .contactSection{
-    padding: 40px 20px;
+    padding: 40px 40px;
 }
 
 .contactForm{
-    background-color: rgba(0, 0, 0, 0.8);
     padding: 30px;
-    border-radius: 10px;
-    color: white;
-    box-shadow: 0px 0px 14px 0px rgba(254,190,144,0.75);
+    width: 70%;
 }
 
 .formInput{
-    width: 100%;
     margin-bottom: 20px;
-    background: none;
-    border: none;
-    border-bottom: 2px solid rgba(255,189,144,1);
-    padding: 10px;
-    border-radius: 3px;
     font-size: 1rem;
-    outline: none;
-    transition: all .5s;
-    color: white;
-}
-
-.formInput:focus{
-    box-shadow: 0px 0px 14px 0px rgba(254,190,144,0.75);
-    border-bottom: 2px solid rgba(0, 0, 0, 0);
-    border-radius: 10px;
-    transition: all .5s;
 }
 
 .contactFormSubmitButton{
-    background: linear-gradient(to right, rgba(255,189,144,1), rgba(223,26,116,1), rgba(93,3,159,1));
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 30px;
     font-size: 1rem;
-    font-weight: 600;
-    transition: all .5s;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /* ------------- FOOTER ------------- */
 
 footer{
-    background-color: rgba(0, 0, 0, 0.8);
-    text-align: center;
-    color: white;
-    padding: 30px 10px;
-    box-shadow: 0px 0px 14px 3px rgba(254,190,144,0.75);
+    padding: 20px 0px;
 }
 
 .footerCopyright{
     font-size: .9rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .footerPortfolioLink{
     font-size: 1.1rem;
-    font-weight: 500;
-}
-
-.portfolioLink{
-    font-weight: 600;
-    background: linear-gradient(to right, rgba(255,189,144,1), rgba(223,26,116,1), rgba(93,3,159,1));
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
 }
 }
 
