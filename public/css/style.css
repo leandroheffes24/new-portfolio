@@ -15,6 +15,8 @@
 body{
     background-image: url("/img/background.png");
     background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .sectionTitle{
@@ -174,6 +176,7 @@ a{
     padding: 20px;
     border-radius: 10px;
     transition: all .5s;
+    cursor: pointer;
 }
 
 .proyectContainer:hover{
@@ -266,6 +269,7 @@ a{
 
 .aboutMeImage{
     width: 100%;
+    object-fit: contain;
 }
 
 .aboutMeInfoContainer{
@@ -812,6 +816,93 @@ footer{
     font-size: 1.1rem;
 }
 }
+
+/* --------------------------- DESKTOP VIEW --------------------------- */
+
+@media (width >= 1200px) {
+    
+    /* ------------- HEADER ------------- */
+    
+    .headerNavbarLink{
+        font-weight: 600;
+    }
+    
+    /* ------------- MAIN ------------- */
+    
+    /* HOME SECTION */
+    
+    .cvLink{
+        font-size: 1.4rem;
+    }
+    
+    /* PROYECTS SECTION */
+    
+    .proyectsSection{
+        padding: 40px 60px;
+    }
+    
+    .proyectsContainer{
+        gap: 20px;
+    }
+    
+    .proyectContainer{
+        width: 340px;
+    }
+    
+    .proyectDetail{
+        width: 30%;
+        box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, 0.6);
+        cursor: default;
+    }
+    
+    .proyectTitleDetail{
+        font-size: 1.3rem;
+    }
+    
+    .proyectLink{
+        font-size: 1.3rem;
+    }
+    
+    /* ABOUT ME SECTION */
+    
+    .aboutMeSection{
+        padding: 40px 60px;
+    }
+
+    .aboutMeImage{
+        height: 400px;
+    }
+    
+    .aboutMeInfoContainer{
+        margin: 0 30px;
+    }
+    
+    .aboutMeInfoContainer>p{
+        font-size: .9rem;
+    }
+    
+    .aboutMeCardsContainer{
+        gap: 15px;
+    }
+    
+    /* CONTACT SECTION */
+    
+    .contactSection{
+        padding: 40px 60px;
+    }
+    
+    .contactForm{
+        width: 60%;
+    }
+    
+    .formInput{
+        font-size: .9rem;
+    }
+    
+    .contactFormSubmitButton{
+        font-size: .9rem;
+    }
+    }
 
 /* --------------------------- KEYFRAMES --------------------------- */
 
