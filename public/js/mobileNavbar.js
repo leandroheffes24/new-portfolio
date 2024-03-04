@@ -4,12 +4,12 @@ const closeMobileNavbarButton = document.querySelector(".closeMobileNavbarButton
 const mobileNavbarLink = document.querySelectorAll(".mobileNavbarLink")
 
 mobileNavbarButton.addEventListener("click", (e) => {
-    mobileNavbar.classList.toggle("display-block")
+    mobileNavbar.classList.toggle("showMobileNavbar")
     mobileNavbarButton.classList.toggle("display-none")
 })
 
 closeMobileNavbarButton.addEventListener("click", (e) => {
-    mobileNavbar.classList.toggle("display-block")
+    mobileNavbar.classList.toggle("showMobileNavbar")
     mobileNavbarButton.classList.toggle("display-none")
 })
 

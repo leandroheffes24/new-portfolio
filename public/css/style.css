@@ -48,6 +48,11 @@ a{
     animation: left-to-right 2s;
 }
 
+.showMobileNavbar{
+    display: block !important;
+    animation: up-to-down 1s;
+}
+
 /* --------------------------- HEADER --------------------------- */
 
 .headerNavbar{
@@ -95,7 +100,7 @@ a{
     z-index: 20;
     position: fixed;
     top: 0;
-    box-shadow: 0px 500px 0px 200px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 1000px 0px 1000px rgba(0, 0, 0, 0.6);
     text-align: center;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -933,5 +938,23 @@ footer{
     }
     to{
         transform: translateX(0px);
+    }
+}
+
+@keyframes up-to-down {
+    from{
+        transform: translateY(-50vh);
+    }
+    to{
+        transform: translateY(0vh);
+    }
+}
+
+@keyframes down-to-up {
+    from{
+        transform: translateY(0vh);
+    }
+    to{
+        transform: translateY(-50vh);
     }
 }
