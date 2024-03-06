@@ -10,6 +10,8 @@ const router = Router()
 // -------------------- ROUTES --------------------
 
 router.get("/", mainController.index)
+router.get("/login", mainController.login)
+router.get("/error404", mainController.error404)
 
 // -------------------- EXPORT --------------------
 

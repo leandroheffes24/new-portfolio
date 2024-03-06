@@ -53,6 +53,11 @@ a{
     animation: up-to-down 1s;
 }
 
+.showProyectDetail{
+    display: block !important;
+    animation: fadeIn 1s;
+}
+
 /* --------------------------- HEADER --------------------------- */
 
 .headerNavbar{

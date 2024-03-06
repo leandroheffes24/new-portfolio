@@ -7,21 +7,21 @@ const theWeekndPortalDetail = document.getElementById("theWeekndPortalDetail")
 const closeProyectDetailButton = document.querySelector(".closeProyectDetailButton")
 
 swProyectContainer.addEventListener("click", (e) => {
-    swProyectDetail.classList.toggle("display-block")
+    swProyectDetail.classList.toggle("showProyectDetail")
     closeProyectDetailButton.addEventListener("click", (e) => {
         swProyectDetail.classList.toggle("display-block")
     })
 })
 
 clothingEcommerceContainer.addEventListener("click", (e) => {
-    clothingEcommerceProyectDetail.classList.toggle("display-block")
+    clothingEcommerceProyectDetail.classList.toggle("showProyectDetail")
     closeProyectDetailButton.addEventListener("click", (e) => {
         clothingEcommerceProyectDetail.classList.toggle("display-block")
     })
 })
 
 theWeekndPortalContainer.addEventListener("click", (e) => {
-    theWeekndPortalDetail.classList.toggle("display-block")
+    theWeekndPortalDetail.classList.toggle("showProyectDetail")
     closeProyectDetailButton.addEventListener("click", (e) => {
         theWeekndPortalDetail.classList.toggle("display-block")
     })
