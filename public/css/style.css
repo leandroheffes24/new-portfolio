@@ -516,6 +516,11 @@ footer{
     margin-top: 10px;
 }
 
+.loginErrorsContainer{
+    color: red;
+    font-size: .9rem;
+}
+
 /* --------------------------- MEDIA QUERIES --------------------------- */
 
 /* --------------------------- TABLET VIEW --------------------------- */

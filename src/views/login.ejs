@@ -5,7 +5,7 @@
 </head>
 <body>
     <main>
-        <form class="loginForm" action="" method="post">
+        <form class="loginForm" action="/login" method="post">
             <h1 class="loginTitle">Sign in</h1>
 
             <label for="email">
@@ -15,6 +15,20 @@
             <label for="password">
                 <input class="loginInput" type="password" name="password" id="password" placeholder="password">
             </label>
+
+            <% if(locals.errors) { %>
+                <div class="loginErrorsContainer">
+                    <% if (locals.errors && errors.email) { %>
+                        <span class="loginError">
+                            <%= errors.email.msg %>
+                        </span>
+                    <% } else if (locals.errors && errors.password) { %>
+                        <span class="loginError">
+                            <%= errors.password.msg %>
+                        </span>
+                    <% } %>
+                </div>
+            <% } %>
 
             <button class="loginButton" type="submit">Login</button>
         </form>
