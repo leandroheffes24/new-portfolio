@@ -8,6 +8,17 @@ const error404Middleware = require("./src/middlewares/error404Middleware")
 
 const app = express()
 
+// ************* CORS *************
+
+const cors = require("cors");
+app.use(
+    cors(
+        (corsOptions = {
+        origin: "*",
+        })
+    )
+);
+
 // -------------------- SETTINGS --------------------
 
 app.set("view engine", "ejs")
