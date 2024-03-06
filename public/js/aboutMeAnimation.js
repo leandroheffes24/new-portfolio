@@ -4,8 +4,6 @@ const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             aboutMeInfoContainer.classList.add('aboutMeAnimation');
-        } else {
-            aboutMeInfoContainer.classList.remove('aboutMeAnimation');
         }
     });
 });
