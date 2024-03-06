@@ -10,6 +10,10 @@ module.exports = {
         return res.render("login")
     },
 
+    proyectCreate: (req, res) => {
+        return res.render("createProyect")
+    },
+
     error404: (req, res) => {
         return res.render("error404")
     },
@@ -37,7 +41,11 @@ module.exports = {
             })
         } else {
             req.session.userLoggedIn = userInDB
-            return res.redirect("/")
+            return res.render("index")
         }
+    },
+
+    proyectCreateProcess: (req, res) => {
+        
     }
 }

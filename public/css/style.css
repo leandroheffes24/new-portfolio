@@ -766,6 +766,11 @@ footer{
     padding: 10px 30px;
     font-size: 1rem;
 }
+
+.loginErrorsContainer{
+    color: red;
+    font-size: 1rem;
+}
 }
 
 /* --------------------------- MINI DESKTOP VIEW --------------------------- */
@@ -1077,6 +1082,11 @@ footer{
         padding: 10px 50px;
         font-weight: 600;
         font-size: .8rem;
+    }
+
+    .loginErrorsContainer{
+        color: red;
+        font-size: .9rem;
     }
 }
 

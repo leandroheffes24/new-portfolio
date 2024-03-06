@@ -6,12 +6,22 @@
 <body>
     <header>
         <nav class="headerNavbar">
-            <ul>
-                <li><a class="headerNavbarLink" href="#homeSection">Home</a></li>
-                <li><a class="headerNavbarLink" href="#proyectsSection">Proyects</a></li>
-                <li><a class="headerNavbarLink" href="#aboutMeSection">About me</a></li>
-                <li><a class="headerNavbarLink" href="#contactSection">Contact</a></li>
-            </ul>
+            <% if (locals.userLoggedIn) { %>
+                <ul>
+                    <li><a class="headerNavbarLink" href="#homeSection">Home</a></li>
+                    <li><a class="headerNavbarLink" href="#proyectsSection">Proyects</a></li>
+                    <li><a class="headerNavbarLink" href="#aboutMeSection">About me</a></li>
+                    <li><a class="headerNavbarLink" href="#contactSection">Contact</a></li>
+                    <li><a class="headerNavbarLink" href="/proyect-create">Create proyect</a></li>
+                </ul>
+            <% } else { %>
+                <ul>
+                    <li><a class="headerNavbarLink" href="#homeSection">Home</a></li>
+                    <li><a class="headerNavbarLink" href="#proyectsSection">Proyects</a></li>
+                    <li><a class="headerNavbarLink" href="#aboutMeSection">About me</a></li>
+                    <li><a class="headerNavbarLink" href="#contactSection">Contact</a></li>
+                </ul>
+            <% } %>
         </nav>
 
         <button class="mobileNavbarButton">
@@ -21,12 +31,22 @@
 
     <main>
         <nav class="mobileNavbar">
-            <ul class="mobileNavbarUnorderList">
-                <li><a class="mobileNavbarLink" href="#homeSection">Home</a></li>
-                <li><a class="mobileNavbarLink" href="#proyectsSection">Proyects</a></li>
-                <li><a class="mobileNavbarLink" href="#aboutMeSection">About me</a></li>
-                <li><a class="mobileNavbarLink" href="#contactSection">Contact</a></li>
-            </ul>
+            <% if (locals.userLoggedIn) { %>
+                <ul class="mobileNavbarUnorderList">
+                    <li><a class="mobileNavbarLink" href="#homeSection">Home</a></li>
+                    <li><a class="mobileNavbarLink" href="#proyectsSection">Proyects</a></li>
+                    <li><a class="mobileNavbarLink" href="#aboutMeSection">About me</a></li>
+                    <li><a class="mobileNavbarLink" href="#contactSection">Contact</a></li>
+                    <li><a class="headerNavbarLink" href="/proyect-create">Create proyect</a></li>
+                </ul>
+            <% } else { %>
+                <ul class="mobileNavbarUnorderList">
+                    <li><a class="mobileNavbarLink" href="#homeSection">Home</a></li>
+                    <li><a class="mobileNavbarLink" href="#proyectsSection">Proyects</a></li>
+                    <li><a class="mobileNavbarLink" href="#aboutMeSection">About me</a></li>
+                    <li><a class="mobileNavbarLink" href="#contactSection">Contact</a></li>
+                </ul>
+            <% } %>
 
             <button class="closeMobileNavbarButton">
                 <i class="fa-solid fa-xmark"></i>
