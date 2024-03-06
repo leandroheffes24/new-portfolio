@@ -2,6 +2,7 @@
 
 const express = require("express")
 const mainRouter = require("./src/routers/mainRouter")
+const error404Middleware = require("./src/middlewares/error404Middleware")
 
 // -------------------- APP --------------------
 
@@ -11,10 +12,6 @@ const app = express()
 
 app.set("view engine", "ejs")
 app.set("views", __dirname + "/src/views")
-
-// -------------------- MIDDLEWARES --------------------
-
-const error404Middleware = require("./src/middlewares/error404Middleware")
 
 // -------------------- USES --------------------
 

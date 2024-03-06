@@ -445,6 +445,31 @@ footer{
 	-webkit-background-clip: text;
 }
 
+/* --------------------------- ERROR 404 --------------------------- */
+
+.error404Container{
+    background: linear-gradient(to right, rgb(55, 55, 55), rgb(10, 10, 10));
+    color: white;
+    width: 90%;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    box-shadow: 0px 0px 14px 3px rgba(254,190,144,0.75);
+}
+
+.error404Title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.error404Text{
+    font-size: .8rem;
+}
+
 /* --------------------------- MEDIA QUERIES --------------------------- */
 
 /* --------------------------- TABLET VIEW --------------------------- */
@@ -656,6 +681,17 @@ footer{
 .footerPortfolioLink{
     font-size: 1.2rem;
 }
+
+/* ------------- ERROR 404 ------------- */
+
+.error404Container{
+    width: 70%;
+    padding: 30px 50px;
+}
+
+.error404Title{
+    margin-bottom: 20px;
+}
 }
 
 /* --------------------------- MINI DESKTOP VIEW --------------------------- */
@@ -827,6 +863,17 @@ footer{
 .footerPortfolioLink{
     font-size: 1.1rem;
 }
+
+/* ------------- ERROR 404 ------------- */
+
+.error404Container{
+    width: 60%;
+    padding: 30px 50px;
+}
+
+.error404Text{
+    font-size: 1rem;
+}
 }
 
 /* --------------------------- DESKTOP VIEW --------------------------- */
@@ -918,7 +965,13 @@ footer{
     .contactFormSubmitButton{
         font-size: .9rem;
     }
+
+    /* ------------- ERROR 404 ------------- */
+
+    .error404Container{
+        width: 50%;
     }
+}
 
 /* --------------------------- KEYFRAMES --------------------------- */
 
