@@ -409,6 +409,7 @@ a{
     font-weight: 600;
     transition: all .5s;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 /* --------------------------- FOOTER --------------------------- */
