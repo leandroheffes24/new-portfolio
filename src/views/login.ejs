@@ -4,6 +4,20 @@
     <%- include("partials/head", {title: "Login"}) %>
 </head>
 <body>
-    
+    <main>
+        <form class="loginForm" action="">
+            <h1 class="loginTitle">Sign in</h1>
+
+            <label for="email">
+                <input type="email" name="email" id="email">
+            </label>
+
+            <label for="password">
+                <input type="password" name="password" id="password">
+            </label>
+
+            <button type="submit">Login</button>
+        </form>
+    </main>
 </body>
 </html>
