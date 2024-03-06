@@ -412,7 +412,6 @@ a{
     padding: 10px 30px;
     font-size: 1rem;
     font-weight: 600;
-    transition: all .5s;
     margin-top: 20px;
     cursor: pointer;
 }
@@ -471,6 +470,51 @@ footer{
 }
 
 /* --------------------------- LOGIN --------------------------- */
+
+.loginForm{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 14px 3px rgba(254,190,144,0.75);
+    padding: 20px;
+    width: 80%;
+}
+
+.loginTitle{
+    background: linear-gradient(to right, rgba(255,189,144,1), rgba(223,26,116,1), rgba(93,3,159,1));
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.loginInput{
+    width: 100%;
+    background-color: rgb(40, 40, 40);
+    border: none;
+    font-size: 1rem;
+    color: white;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.loginButton{
+    background: linear-gradient(to right, rgba(255,189,144,1), rgba(223,26,116,1), rgba(93,3,159,1));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 20px;
+    font-size: .9rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+}
 
 /* --------------------------- MEDIA QUERIES --------------------------- */
 
@@ -694,6 +738,29 @@ footer{
 .error404Title{
     margin-bottom: 20px;
 }
+
+/* ------------- LOGIN ------------- */
+
+.loginForm{
+    padding: 30px;
+    width: 60%;
+}
+
+.loginTitle{
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.loginInput{
+    font-size: 1.1rem;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+.loginButton{
+    padding: 10px 30px;
+    font-size: 1rem;
+}
 }
 
 /* --------------------------- MINI DESKTOP VIEW --------------------------- */
@@ -876,6 +943,21 @@ footer{
 .error404Text{
     font-size: 1rem;
 }
+
+/* ------------- LOGIN ------------- */
+
+.loginForm{
+    width: 50%;
+}
+
+.loginInput{
+    font-size: 1rem;
+}
+
+.loginButton{
+    padding: 10px 40px;
+    font-size: .9rem;
+}
 }
 
 /* --------------------------- DESKTOP VIEW --------------------------- */
@@ -972,6 +1054,24 @@ footer{
 
     .error404Container{
         width: 50%;
+    }
+
+    /* ------------- LOGIN ------------- */
+
+    .loginForm{
+        width: 30%;
+    }
+
+    .loginInput{
+        padding: 10px;
+        margin-bottom: 15px;
+        font-size: .9rem;
+    }
+
+    .loginButton{
+        padding: 10px 50px;
+        font-weight: 600;
+        font-size: .8rem;
     }
 }
 
