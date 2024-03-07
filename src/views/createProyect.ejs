@@ -24,6 +24,22 @@
                 <input class="loginInput" type="file" name="proyectImage" id="proyectImage">
             </label>
 
+            <% if(locals.errors) { %>
+                <div class="loginErrorsContainer">
+                    <% if (locals.errors && errors.proyectName) { %>
+                        <span class="loginError">
+                            <%= errors.proyectName.msg %>
+                        </span>
+                    <% } %>
+
+                    <% if (locals.errors && errors.proyectImage) { %>
+                        <span class="loginError">
+                            <%= errors.proyectImage.msg %>
+                        </span>
+                    <% } %>
+                </div>
+            <% } %>
+
             <button class="loginButton" type="submit">Create</button>
         </form>
     </main>

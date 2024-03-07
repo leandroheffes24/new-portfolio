@@ -521,9 +521,9 @@ footer{
     font-size: .9rem;
 }
 
-/* --------------------------- CREATE PROYECT FORM --------------------------- */
-
-
+.loginError{
+    display: block;
+}
 
 /* --------------------------- MEDIA QUERIES --------------------------- */
 

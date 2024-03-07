@@ -5,10 +5,9 @@ const mainRouter = require("./src/routers/mainRouter")
 const methodOverride = require("method-override");
 const session = require ('express-session');
 
-// ---------- REQUIREMENTS ----------
+// ---------- MIDDLEWARES ----------
 
 const error404Middleware = require("./src/middlewares/error404Middleware")
-
 
 // -------------------- APP --------------------
 

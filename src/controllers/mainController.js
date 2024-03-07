@@ -6,7 +6,7 @@ const { v4: uuidv4 } = require('uuid');
 
 module.exports = {
     index: (req, res) => {
-        return res.render("index")
+        return proyectsServices.getAllProyects().then(proyects => res.render("index", {proyects}))
     },
 
     login: (req, res) => {
@@ -44,8 +44,8 @@ module.exports = {
             })
         } else {
             req.session.userLoggedIn = userInDB
-            res.locals.isLoggedIn = true
-            return res.render("index")
+            res.locals.sessionExists = true
+            return res.redirect("/")
         }
     },
 
@@ -65,6 +65,6 @@ module.exports = {
             ...req.body
         }
 
-        return proyectsServices.createProduct(newProyect, req.file.filename).then(res.redirect("/"))
+        return proyectsServices.createProyect(newProyect, req.file.filename).then(res.redirect("/"))
     }
 }

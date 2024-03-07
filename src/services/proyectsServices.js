@@ -1,7 +1,11 @@
 const {Proyects} = require("../../database/models")
 
 module.exports = {
-    createProduct: (proyect, image) => {
+    getAllProyects: () => {
+        return Proyects.findAll()
+    },
+
+    createProyect: (proyect, image) => {
         // console.log("THIS IS THE PROYECT =>", proyect);
         // console.log("THIS IS THE IMAGE =>", image);
         return Proyects.create({

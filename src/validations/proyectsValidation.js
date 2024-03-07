@@ -5,7 +5,7 @@ module.exports = [
     body("proyectName").notEmpty().withMessage("You must enter a name for the project."),
     body("proyectImage").custom((value, {req}) => {
         let file = req.file
-        let acceptedExtensions = [".png", ".jpg", "webp"]
+        let acceptedExtensions = [".png", ".jpg", ".webp"]
 
         if(!file){
             throw new Error("You must upload an image.")
