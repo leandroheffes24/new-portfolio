@@ -68,31 +68,23 @@
 
             <div class="proyectsContainer">
                 <% proyects.forEach(proyect => { %>
-                    <div class="proyectContainer" id="swProyectContainer">
+                    <div class="proyectContainer" id="<%= proyect.id %>">
                         <img class="proyectImage" src="/img/proyects/<%= proyect.image %>" alt="<%= proyect.name %>">
 
                         <h4 class="proyectTitle"><%= proyect.name %></h4>
-
-                        <div class="proyectDetail" id="swProyectDetail">
-                            <button class="closeProyectDetailButton">
-                                <i class="fa-solid fa-square-xmark"></i>
-                            </button>
-        
-                            <img class="proyectImageDetail" src="/img/proyects/<%= proyect.image %>" alt="<%= proyect.name %>">
-                            <h4 class="proyectTitleDetail"><%= proyect.name %></h4>
-        
-                            <div class="proyectLinks">
-                                <% if (proyect.github_link) { %>
-                                    <a class="proyectLink" href="<%= proyect.github_link %>"><i class="fa-brands fa-github"></i></a>
-                                <% } %>
-
-                                <% if (proyect.github_link) { %>
-                                    <a class="proyectLink" href="<%= proyect.proyect_link %>"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                <% } %>
-                            </div>
-                        </div>
                     </div>
                 <% }) %>
+
+                <div class="proyectDetail">
+                    <button class="closeProyectDetailButton" id="closeProyectDetailButton">
+                        <i class="fa-solid fa-square-xmark"></i>
+                    </button>
+
+                    <img class="proyectImageDetail" src="" alt="">
+                    <h4 class="proyectTitleDetail"></h4>
+
+                    <div class="proyectLinks"></div>
+                </div>
             </div>
         </section>
 

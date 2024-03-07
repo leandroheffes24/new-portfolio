@@ -5,6 +5,10 @@ module.exports = {
         return Proyects.findAll()
     },
 
+    getProyectById: (id) => {
+        return Proyects.findByPk(id)
+    },
+
     createProyect: (proyect, image) => {
         // console.log("THIS IS THE PROYECT =>", proyect);
         // console.log("THIS IS THE IMAGE =>", image);

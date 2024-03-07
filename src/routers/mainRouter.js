@@ -6,12 +6,15 @@ const userLoggedInMiddleware = require("../middlewares/userLoggedInMiddleware")
 const guestMiddleware = require("../middlewares/guestMiddleware")
 const multerUpload = require("./multer/multerConfig")
 const proyectsValidation = require("../validations/proyectsValidation")
+const apiRouter = require("./api/index")
 
 // -------------------- ROUTER --------------------
 
 const router = Router()
 
 // -------------------- ROUTES --------------------
+
+router.use("/api", apiRouter)
 
 router.get("/", mainController.index)
 router.get("/login", userLoggedInMiddleware, mainController.login)

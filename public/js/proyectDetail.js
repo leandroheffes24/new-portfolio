@@ -1,28 +1,59 @@
-const swProyectContainer = document.getElementById("swProyectContainer")
-const swProyectDetail = document.getElementById("swProyectDetail")
-const clothingEcommerceContainer = document.getElementById("clothingEcommerceContainer")
-const clothingEcommerceProyectDetail = document.getElementById("clothingEcommerceProyectDetail")
-const theWeekndPortalContainer = document.getElementById("theWeekndPortalContainer")
-const theWeekndPortalDetail = document.getElementById("theWeekndPortalDetail")
-const closeProyectDetailButton = document.querySelector(".closeProyectDetailButton")
+fetch('http://localhost:3024/api/proyects')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const proyects = data.proyects
+            console.log("PROYECTOSSSS NUEVOS =>", proyects);
 
-swProyectContainer.addEventListener("click", (e) => {
-    swProyectDetail.classList.toggle("showProyectDetail")
-    closeProyectDetailButton.addEventListener("click", (e) => {
-        swProyectDetail.classList.toggle("display-block")
-    })
-})
+            const proyectDetail = document.querySelector(".proyectDetail")
+            const proyectImageDetail = document.querySelector(".proyectImageDetail")
+            const proyectTitleDetail = document.querySelector(".proyectTitleDetail")
+            const proyectLinks = document.querySelector(".proyectLinks")
+            const closeProyectDetailButton = document.querySelector(".closeProyectDetailButton")
 
-clothingEcommerceContainer.addEventListener("click", (e) => {
-    clothingEcommerceProyectDetail.classList.toggle("showProyectDetail")
-    closeProyectDetailButton.addEventListener("click", (e) => {
-        clothingEcommerceProyectDetail.classList.toggle("display-block")
-    })
-})
+            const openDetail = (id) => {
+                const proyect = proyects.find(proyect => proyect.id === id);
 
-theWeekndPortalContainer.addEventListener("click", (e) => {
-    theWeekndPortalDetail.classList.toggle("showProyectDetail")
-    closeProyectDetailButton.addEventListener("click", (e) => {
-        theWeekndPortalDetail.classList.toggle("display-block")
-    })
-})
+                proyectImageDetail.src = `/img/proyects/${proyect.image}`;
+                proyectImageDetail.alt = proyect.name;
+                proyectTitleDetail.textContent = proyect.name;
+
+                proyectLinks.innerHTML = "";
+                if (proyect.github_link) {
+                    const githubLink = document.createElement("a");
+                    githubLink.href = proyect.github_link;
+                    githubLink.classList.add("proyectLink");
+                    githubLink.innerHTML = '<i class="fa-brands fa-github"></i>';
+                    proyectLinks.appendChild(githubLink);
+                }
+
+                if (proyect.proyect_link) {
+                    const proyectLink = document.createElement("a");
+                    proyectLink.href = proyect.proyect_link;
+                    proyectLink.classList.add("proyectLink");
+                    proyectLink.innerHTML = '<i class="fa-solid fa-arrow-up-right-from-square"></i>';
+                    proyectLinks.appendChild(proyectLink);
+                }
+
+                proyectDetail.style.display = "block";
+            }
+
+            // Close proyect detail
+            closeProyectDetailButton.addEventListener("click", () => {
+                proyectDetail.style.display = "none";
+            })
+
+            // Click event on every proyect
+            const proyectContainers = document.querySelectorAll(".proyectContainer");
+            proyectContainers.forEach(container => {
+                container.addEventListener("click", function() {
+                    console.log("CLICKEE EL PROYECTO");
+                    const proyectId = container.getAttribute("id");
+                    openDetail(proyectId);
+                });
+            });
+        })
