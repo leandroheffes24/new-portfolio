@@ -6,7 +6,7 @@
 <body>
     <header>
         <nav class="headerNavbar">
-            <% if (locals.userLoggedIn) { %>
+            <% if (locals.isLoggedIn) { %>
                 <ul>
                     <li><a class="headerNavbarLink" href="#homeSection">Home</a></li>
                     <li><a class="headerNavbarLink" href="#proyectsSection">Proyects</a></li>
@@ -31,7 +31,7 @@
 
     <main>
         <nav class="mobileNavbar">
-            <% if (locals.userLoggedIn) { %>
+            <% if (locals.isLoggedIn) { %>
                 <ul class="mobileNavbarUnorderList">
                     <li><a class="mobileNavbarLink" href="#homeSection">Home</a></li>
                     <li><a class="mobileNavbarLink" href="#proyectsSection">Proyects</a></li>

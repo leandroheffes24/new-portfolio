@@ -1,6 +1,8 @@
 const sessionServices = require("../services/sessionServices")
+const proyectsServices = require("../services/proyectsServices")
 const bcrypt = require("bcryptjs")
 const {validationResult} = require("express-validator")
+const { v4: uuidv4 } = require('uuid');
 
 module.exports = {
     index: (req, res) => {
@@ -42,16 +44,27 @@ module.exports = {
             })
         } else {
             req.session.userLoggedIn = userInDB
-            return res.render("index", {userLoggedIn:userInDB})
+            res.locals.isLoggedIn = true
+            return res.render("index")
         }
     },
 
     proyectCreateProcess: (req, res) => {
         let errors = validationResult(req)
-        console.log("ESTOS SON LOS ERRORES => ", errors.mapped());
+        // console.log("THESE ARE THE ERRORS => ", errors);
+        // console.log("THESE ARE THE MAPPED ERRORS => ", errors.mapped());
+        // console.log("ERRORS.ERRORS =>", errors.errors);
+        // console.log("THIS IS THE BODY =>", req.body);
 
-        // if (errors.errors.length > 0) {
-        //     return res.render("createProyect", {errors: errors.mapped(), oldData: req.body})
-        // }
+        if (errors.errors.length > 0) {
+            return res.render("createProyect", {errors: errors.mapped(), oldData: req.body})
+        }
+
+        let newProyect = {
+            id: uuidv4(),
+            ...req.body
+        }
+
+        return proyectsServices.createProduct(newProyect, req.file.filename).then(res.redirect("/"))
     }
 }

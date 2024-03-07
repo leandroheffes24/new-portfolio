@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             name: DataTypes.STRING,
             image: DataTypes.STRING,
             proyect_link: DataTypes.STRING,
-            github_proyect: DataTypes.STRING,
+            github_link: DataTypes.STRING,
         },
         {
             tableName: "proyects",
