@@ -879,10 +879,6 @@ header{
     cursor: pointer;
 }
 
-.proyectImageDetail{
-    height: 200px;
-}
-
 .proyectTitleDetail{
     font-size: 1.5rem;
     margin: 20px 0;

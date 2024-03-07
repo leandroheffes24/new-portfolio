@@ -8,6 +8,7 @@ const session = require ('express-session');
 // ---------- MIDDLEWARES ----------
 
 const error404Middleware = require("./src/middlewares/error404Middleware")
+const sessionExists = require("./src/middlewares/sessionExists")
 
 // -------------------- APP --------------------
 
@@ -41,6 +42,7 @@ app.use(
     })
 )
 app.use(express.urlencoded({extended: false}))
+app.use(sessionExists)
 
 // -------------------- ROUTERS --------------------
 

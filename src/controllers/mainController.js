@@ -44,7 +44,6 @@ module.exports = {
             })
         } else {
             req.session.userLoggedIn = userInDB
-            res.locals.sessionExists = true
             return res.redirect("/")
         }
     },
