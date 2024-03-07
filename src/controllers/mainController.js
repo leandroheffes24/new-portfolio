@@ -1,5 +1,6 @@
 const sessionServices = require("../services/sessionServices")
 const bcrypt = require("bcryptjs")
+const {validationResult} = require("express-validator")
 
 module.exports = {
     index: (req, res) => {
@@ -41,11 +42,16 @@ module.exports = {
             })
         } else {
             req.session.userLoggedIn = userInDB
-            return res.render("index")
+            return res.render("index", {userLoggedIn:userInDB})
         }
     },
 
     proyectCreateProcess: (req, res) => {
-        
+        let errors = validationResult(req)
+        console.log("ESTOS SON LOS ERRORES => ", errors.mapped());
+
+        // if (errors.errors.length > 0) {
+        //     return res.render("createProyect", {errors: errors.mapped(), oldData: req.body})
+        // }
     }
 }

@@ -5,26 +5,26 @@
 </head>
 <body>
     <main>
-        <form class="proyectCreateForm" action="/proyect-create" method="post" enctype="multipart/form-data">
-            <h1 class="createProyectTitle">Create proyect</h1>
+        <form class="loginForm" action="/proyect-create" method="post" enctype="multipart/form-data">
+            <h1 class="loginTitle">Create proyect</h1>
 
             <label for="proyectName">
-                <input type="text" name="proyectName" id="proyectName" placeholder="proyect name">
+                <input class="loginInput" type="text" name="proyectName" id="proyectName" placeholder="proyect name">
             </label>
 
             <label for="proyectLink">
-                <input type="url" name="proyectLink" id="proyectLink" placeholder="proyect link">
+                <input class="loginInput" type="url" name="proyectLink" id="proyectLink" placeholder="proyect link">
             </label>
 
             <label for="githubLink">
-                <input type="url" name="githubLink" id="githubLink" placeholder="Github link">
+                <input class="loginInput" type="url" name="githubLink" id="githubLink" placeholder="Github link">
             </label>
 
             <label for="proyectImage">
-                <input type="file" name="proyectImage" id="proyectImage">
+                <input class="loginInput" type="file" name="proyectImage" id="proyectImage">
             </label>
 
-            <button type="submit"></button>
+            <button class="loginButton" type="submit">Create</button>
         </form>
     </main>
 </body>
