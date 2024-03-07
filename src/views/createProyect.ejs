@@ -9,15 +9,15 @@
             <h1 class="loginTitle">Create proyect</h1>
 
             <label for="proyectName">
-                <input class="loginInput" type="text" name="proyectName" id="proyectName" placeholder="proyect name">
+                <input class="loginInput" type="text" name="proyectName" id="proyectName" placeholder="proyect name" value="<%= locals.oldData && oldData.proyectName ? oldData.proyectName : ""%>">
             </label>
 
             <label for="proyectLink">
-                <input class="loginInput" type="url" name="proyectLink" id="proyectLink" placeholder="proyect link">
+                <input class="loginInput" type="url" name="proyectLink" id="proyectLink" placeholder="proyect link" value="<%= locals.oldData && oldData.proyectLink ? oldData.proyectLink : "" %>">
             </label>
 
             <label for="githubLink">
-                <input class="loginInput" type="url" name="githubLink" id="githubLink" placeholder="Github link">
+                <input class="loginInput" type="url" name="githubLink" id="githubLink" placeholder="Github link" value="<%= locals.oldData && oldData.githubLink ? oldData.githubLink : "" %>">
             </label>
 
             <label for="proyectImage">
