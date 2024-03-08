@@ -14,6 +14,8 @@ fetch('http://localhost:3024/api/proyects')
             const proyectTitleDetail = document.querySelector(".proyectTitleDetail")
             const proyectLinks = document.querySelector(".proyectLinks")
             const closeProyectDetailButton = document.querySelector(".closeProyectDetailButton")
+            const proyectEditForm = document.querySelector(".proyectEditForm")
+            const proyectDeleteForm = document.querySelector(".proyectDeleteForm")
 
             const openDetail = (id) => {
                 const proyect = proyects.find(proyect => proyect.id === id);
@@ -21,6 +23,8 @@ fetch('http://localhost:3024/api/proyects')
                 proyectImageDetail.src = `/img/proyects/${proyect.image}`;
                 proyectImageDetail.alt = proyect.name;
                 proyectTitleDetail.textContent = proyect.name;
+                proyectEditForm.action = `/proyect-edit/${proyect.id}`
+                proyectDeleteForm.action = `/proyect-edit/${proyect.id}?_method=delete`
 
                 proyectLinks.innerHTML = "";
                 if (proyect.github_link) {

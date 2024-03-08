@@ -86,13 +86,15 @@
                     <div class="proyectLinks"></div>
 
                     <% if (locals.sessionExists) { %>
-                        <form class="proyectEditForm" action="">
-                            <button type="submit">Edit</button>
-                        </form>
-
-                        <form class="proyectDeleteForm" action="">
-                            <button type="submit">Delete</button>
-                        </form>
+                        <div class="editDeleteButtonsContainer">
+                            <form class="proyectEditForm" action="" method="get">
+                                <button class="editDeleteButton" type="submit">Edit</button>
+                            </form>
+    
+                            <form class="proyectDeleteForm" action="" method="post">
+                                <button class="editDeleteButton" type="submit">Delete</button>
+                            </form>
+                        </div>
                     <% } %>
                 </div>
             </div>

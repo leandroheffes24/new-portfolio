@@ -19,5 +19,25 @@ module.exports = {
             proyect_link: proyect.proyectLink,
             github_link: proyect.githubLink
         })
+    },
+
+    updateProyect: (proyect, image, id) => {
+        return Proyects.update(
+            {
+                name: proyect.proyectName,
+                image: image,
+                proyect_link: proyect.proyectLink,
+                github_link: proyect.githubLink
+            },
+            {
+                where: {id: id}
+            }
+        )
+    },
+
+    deleteProyect: (id) => {
+        return Proyects.destroy({
+            where: {id: id}
+        })
     }
 }

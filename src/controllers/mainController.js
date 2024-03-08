@@ -17,6 +17,16 @@ module.exports = {
         return res.render("createProyect")
     },
 
+    proyectEdit: (req, res) => {
+        const id = req.params.id
+        return proyectsServices.getProyectById(id).then(proyect => res.render("editProyect", {proyect}))
+    },
+
+    proyectDelete: (req, res) => {
+        const id = req.params.id
+        return proyectsServices.deleteProyect(id).then(() => res.redirect("/"))
+    },
+
     error404: (req, res) => {
         return res.render("error404")
     },
@@ -65,5 +75,18 @@ module.exports = {
         }
 
         return proyectsServices.createProyect(newProyect, req.file.filename).then(res.redirect("/"))
+    },
+
+    proyectEditProcess: async (req, res) => {
+        let errors = validationResult(req)
+        const id = req.params.id
+
+        if(errors.errors.length > 0){
+            const proyectToEdit = await proyectsServices.getProyectById(id)
+            return res.render("editProyect", {errors: errors.mapped(), oldData: req.body, proyect:proyectToEdit})
+        }
+
+        const newProyect = req.body
+        return proyectsServices.updateProyect(newProyect, req.file.filename, id).then(res.redirect("/"))
     }
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head", {title: "Proyect edition"}) %>
+</head>
+<body>
+    <main>
+        <form class="loginForm" action="/proyect-edit/<%= proyect.id %>?_method=put" method="post" enctype="multipart/form-data">
+            <h1 class="loginTitle">Edit proyect</h1>
+
+            <label for="proyectName">
+                <input class="loginInput" type="text" name="proyectName" id="proyectName" placeholder="proyect name" value="<%= proyect.name %>">
+            </label>
+
+            <label for="proyectLink">
+                <input class="loginInput" type="url" name="proyectLink" id="proyectLink" placeholder="proyect link" value="<%= proyect.proyect_link %>">
+            </label>
+
+            <label for="githubLink">
+                <input class="loginInput" type="url" name="githubLink" id="githubLink" placeholder="Github link" value="<%= proyect.github_link %>">
+            </label>
+
+            <label for="proyectImage">
+                <input class="loginInput" type="file" name="proyectImage" id="proyectImage">
+            </label>
+
+            <% if(locals.errors) { %>
+                <div class="loginErrorsContainer">
+                    <% if (locals.errors && errors.proyectName) { %>
+                        <span class="loginError">
+                            <%= errors.proyectName.msg %>
+                        </span>
+                    <% } %>
+
+                    <% if (locals.errors && errors.proyectImage) { %>
+                        <span class="loginError">
+                            <%= errors.proyectImage.msg %>
+                        </span>
+                    <% } %>
+                </div>
+            <% } %>
+
+            <button class="loginButton" type="submit">Edit</button>
+        </form>
+    </main>
+</body>
+</html>

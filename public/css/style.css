@@ -262,6 +262,26 @@ a{
     border-radius: 10px;
 }
 
+.editDeleteButtonsContainer{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.editDeleteButton{
+    width: 100%;
+    background: linear-gradient(90deg, rgba(255,189,144,1) 0%, rgba(93,3,159,1) 100%);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
 /* ------------- ABOUT ME SECTION ------------- */
 
 .aboutMeSection{
@@ -641,6 +661,14 @@ footer{
     padding: 3px 40px;
 }
 
+.editDeleteButtonsContainer{
+    margin-top: 30px;
+}
+
+.editDeleteButton{
+    font-size: 1.2rem;
+}
+
 /* ------------- ABOUT ME SECTION ------------- */
 
 .aboutMeSection{
@@ -889,6 +917,14 @@ header{
     padding: 3px 30px;
 }
 
+.editDeleteButtonsContainer{
+    margin-top: 25px;
+}
+
+.editDeleteButton{
+    font-size: 1.1rem;
+}
+
 /* ABOUT ME SECTION */
 
 .aboutMeSection{
@@ -1020,7 +1056,11 @@ footer{
     .proyectLink{
         font-size: 1.3rem;
     }
-    
+
+    .editDeleteButton{
+        font-size: 1rem;
+    }
+
     /* ABOUT ME SECTION */
     
     .aboutMeSection{
