@@ -4,6 +4,7 @@ const express = require("express")
 const mainRouter = require("./src/routers/mainRouter")
 const methodOverride = require("method-override");
 const session = require ('express-session');
+const mysql2Index = require("./database/index")
 
 // ---------- MIDDLEWARES ----------
 
@@ -43,6 +44,7 @@ app.use(
 )
 app.use(express.urlencoded({extended: false}))
 app.use(sessionExists)
+app.use(mysql2Index)
 
 // -------------------- ROUTERS --------------------
 
