@@ -14,15 +14,7 @@ const sessionExists = require("./src/middlewares/sessionExists")
 
 const app = express()
 
-// -------------------- MYSQL --------------------
-
-import mysql2 from 'mysql2';
-if (options.dialect === 'mysql') {
-    options.dialectModule = mysql2;
-}
-new Sequelize(options)
-
-// ************* CORS *************
+// -------------------- CORS --------------------
 
 const cors = require("cors");
 app.use(
