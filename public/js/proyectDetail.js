@@ -7,7 +7,6 @@ fetch('http://localhost:3024/api/proyects')
         })
         .then(data => {
             const proyects = data.proyects
-            console.log("PROYECTOSSSS NUEVOS =>", proyects);
 
             const proyectDetail = document.querySelector(".proyectDetail")
             const proyectImageDetail = document.querySelector(".proyectImageDetail")
@@ -23,8 +22,8 @@ fetch('http://localhost:3024/api/proyects')
                 proyectImageDetail.src = `/img/proyects/${proyect.image}`;
                 proyectImageDetail.alt = proyect.name;
                 proyectTitleDetail.textContent = proyect.name;
-                proyectEditForm.action = `/proyect-edit/${proyect.id}`
-                proyectDeleteForm.action = `/proyect-edit/${proyect.id}?_method=delete`
+                proyectEditForm.action = `/proyect-edit/${proyect.id}`;
+                proyectDeleteForm.action = `/proyect-edit/${proyect.id}?_method=delete`;
 
                 proyectLinks.innerHTML = "";
                 if (proyect.github_link) {
@@ -55,7 +54,6 @@ fetch('http://localhost:3024/api/proyects')
             const proyectContainers = document.querySelectorAll(".proyectContainer");
             proyectContainers.forEach(container => {
                 container.addEventListener("click", function() {
-                    console.log("CLICKEE EL PROYECTO");
                     const proyectId = container.getAttribute("id");
                     openDetail(proyectId);
                 });

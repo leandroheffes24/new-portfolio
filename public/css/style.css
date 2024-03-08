@@ -216,7 +216,7 @@ a{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(40, 40, 40);
     padding: 40px 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 0px 200px rgba(0, 0, 0, 0.6);
