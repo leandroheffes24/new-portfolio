@@ -85,19 +85,35 @@
 
                     <div class="proyectLinks"></div>
 
-                    <div class="editDeleteButtonsContainer">
-                        <form class="proyectEditForm" action="" method="get">
-                            <% if (locals.sessionExists) { %>
-                                <button class="editDeleteButton" type="submit">Edit</button>
-                            <% } %>
-                        </form>
-
-                        <form class="proyectDeleteForm" action="" method="post">
-                            <% if (locals.sessionExists) { %>
-                                <button class="editDeleteButton" type="submit">Delete</button>
-                            <% } %>
-                        </form>
-                    </div>
+                    <% if (locals.sessionExists) { %>
+                        <div class="editDeleteButtonsContainer">
+                            <form class="proyectEditForm" action="" method="get">
+                                <% if (locals.sessionExists) { %>
+                                    <button class="editDeleteButton" type="submit">Edit</button>
+                                <% } %>
+                            </form>
+    
+                            <form class="proyectDeleteForm" action="" method="post">
+                                <% if (locals.sessionExists) { %>
+                                    <button class="editDeleteButton" type="submit">Delete</button>
+                                <% } %>
+                            </form>
+                        </div>
+                    <% } else { %>
+                        <div style="display: none;" class="editDeleteButtonsContainer">
+                            <form class="proyectEditForm" action="" method="get">
+                                <% if (locals.sessionExists) { %>
+                                    <button class="editDeleteButton" type="submit">Edit</button>
+                                <% } %>
+                            </form>
+    
+                            <form class="proyectDeleteForm" action="" method="post">
+                                <% if (locals.sessionExists) { %>
+                                    <button class="editDeleteButton" type="submit">Delete</button>
+                                <% } %>
+                            </form>
+                        </div>
+                    <% } %>
                 </div>
             </div>
         </section>
