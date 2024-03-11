@@ -142,14 +142,14 @@ a{
 
 .homeTItle{
     color: white;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .homeSubtitle{
     color: rgb(159, 32, 209);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 20px;
 }
@@ -594,26 +594,26 @@ footer{
 }
 
 .homeInformation{
-    bottom: 15%;
+    bottom: 10%;
 }
 
 .homeTItle{
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 .homeSubtitle{
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 700;
     margin-bottom: 30px;
 }
 
 .cvButton{
-    padding: 15px 50px;
+    padding: 10px 30px;
 }
 
 .cvLink{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 /* PROYECTS SECTION */
@@ -846,6 +846,15 @@ header{
     color: white;
     font-size: 1.3rem;
     font-weight: 600;
+    position: relative;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: all .4s;
+}
+
+.headerNavbarLink:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all .4s;
 }
 
 .mobileNavbarButton{
@@ -856,25 +865,17 @@ header{
 
 /* HOME SECTION */
 
-.homeInformation{
-    bottom: 10%;
-}
-
 .homeTItle{
-    font-size: 3rem;
+    font-size: 2.4rem;
 }
 
 .homeSubtitle{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
-.cvButton{
-    padding: 15px 60px;
-}
-
 .cvLink{
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 /* PROYECTS SECTION */
@@ -1017,7 +1018,7 @@ footer{
     /* HOME SECTION */
     
     .homeTItle{
-        font-size: 2.8rem;
+        font-size: 2.3rem;
         margin-bottom: 10px;
     }
     
