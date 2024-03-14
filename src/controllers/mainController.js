@@ -1,12 +1,13 @@
 const userServices = require("../database/services/users")
-const proyectsServices = require("../services/proyectsServices")
+const proyectsServices = require("../database/services/proyects")
 const bcrypt = require("bcryptjs")
 const {validationResult} = require("express-validator")
 const { v4: uuidv4 } = require('uuid');
 
 module.exports = {
     index: (req, res) => {
-        return proyectsServices.getAllProyects().then(proyects => res.render("index", {proyects}))
+        const proyects = proyectsServices.getProyects()
+        return res.render("index", {proyects})
     },
 
     login: (req, res) => {
@@ -19,19 +20,21 @@ module.exports = {
 
     proyectEdit: (req, res) => {
         const id = req.params.id
-        return proyectsServices.getProyectById(id).then(proyect => res.render("editProyect", {proyect}))
+        const proyect = proyectsServices.getProyectById(id)
+        return res.render("editProyect", {proyect})
     },
 
     proyectDelete: (req, res) => {
         const id = req.params.id
-        return proyectsServices.deleteProyect(id).then(() => res.redirect("/"))
+        proyectsServices.deleteProyect(id)
+        res.redirect("/")
     },
 
     error404: (req, res) => {
         return res.render("error404")
     },
 
-    access: async (req, res) => {
+    access: (req, res) => {
         const user = userServices.findUserEmail(req.body.email)
 
         if(!user){
@@ -53,31 +56,6 @@ module.exports = {
             })
         }
         return res.redirect("/")
-
-        // const userInDB = await sessionServices.findUserEmail(req.body.email)
-
-        // if(!userInDB){
-        //     return res.render("login", {
-        //         errors: {
-        //             email: {
-        //                 msg: "Unregistered email"
-        //             }
-        //         }
-        //     })
-        // }
-
-        // if (!bcrypt.compareSync(req.body.password, userInDB.password)){
-        //     return res.render("login", {
-        //         errors: {
-        //             email: {
-        //                 msg: "Incorrect password"
-        //             }
-        //         }
-        //     })
-        // } else {
-        //     req.session.userLoggedIn = userInDB
-        //     return res.redirect("/")
-        // }
     },
 
     proyectCreateProcess: (req, res) => {
@@ -96,19 +74,22 @@ module.exports = {
             ...req.body
         }
 
-        return proyectsServices.createProyect(newProyect, req.file.filename).then(res.redirect("/"))
+        proyectsServices.createProyect(newProyect, req.file.filename)
+
+        return res.redirect("/")
     },
 
-    proyectEditProcess: async (req, res) => {
+    proyectEditProcess: (req, res) => {
         let errors = validationResult(req)
         const id = req.params.id
 
         if(errors.errors.length > 0){
-            const proyectToEdit = await proyectsServices.getProyectById(id)
+            const proyectToEdit = proyectsServices.getProyectById(id)
             return res.render("editProyect", {errors: errors.mapped(), oldData: req.body, proyect:proyectToEdit})
         }
 
         const newProyect = req.body
-        return proyectsServices.updateProyect(newProyect, req.file.filename, id).then(res.redirect("/"))
+        proyectsServices.updateProyect(newProyect, req.file.filename, id)
+        return res.redirect("/")
     }
 }

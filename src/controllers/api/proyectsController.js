@@ -1,8 +1,8 @@
-const proyectsServices = require("../../services/proyectsServices")
+const proyectsServices = require("../../database/services/proyects")
 
 module.exports = {
-    list: async (req, res) => {
-        const proyects = await proyectsServices.getAllProyects()
+    list: (req, res) => {
+        const proyects = proyectsServices.getProyects()
 
         res.json({
             meta: {

@@ -3,7 +3,7 @@
 <head>
     <%- include("partials/head", {title: "Proyect edition"}) %>
 </head>
-<body>
+<body class="editProyectBody">
     <main>
         <form class="loginForm" action="/proyect-edit/<%= proyect.id %>?_method=put" method="post" enctype="multipart/form-data">
             <h1 class="loginTitle">Edit proyect</h1>

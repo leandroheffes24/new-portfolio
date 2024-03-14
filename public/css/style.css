@@ -499,12 +499,11 @@ footer{
 
 /* --------------------------- LOGIN --------------------------- */
 
-.loginBody{
+.loginBody, .createProyectBody, .editProyectBody{
     background-image: url('/img/homeBackground.webp');
     background-position-x: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: gray;
 }
 
 .loginForm{
@@ -559,6 +558,16 @@ footer{
 
 .loginError{
     display: block;
+}
+
+/* --------------------------- LOGIN --------------------------- */
+
+.createProyectBody{
+    background-image: url('/img/homeBackground.webp');
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: gray;
 }
 
 /* --------------------------- MEDIA QUERIES --------------------------- */
