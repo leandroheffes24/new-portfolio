@@ -1,4 +1,4 @@
-const sessionServices = require("../services/sessionServices")
+const userServices = require("../database/services/users")
 const proyectsServices = require("../services/proyectsServices")
 const bcrypt = require("bcryptjs")
 const {validationResult} = require("express-validator")
@@ -32,9 +32,9 @@ module.exports = {
     },
 
     access: async (req, res) => {
-        const userInDB = await sessionServices.findUserEmail(req.body.email)
+        const user = userServices.findUserEmail(req.body.email)
 
-        if(!userInDB){
+        if(!user){
             return res.render("login", {
                 errors: {
                     email: {
@@ -43,19 +43,41 @@ module.exports = {
                 }
             })
         }
-
-        if (!bcrypt.compareSync(req.body.password, userInDB.password)){
+        if(!bcrypt.compareSync(req.body.password, user.password)){
             return res.render("login", {
                 errors: {
-                    email: {
+                    password: {
                         msg: "Incorrect password"
                     }
                 }
             })
-        } else {
-            req.session.userLoggedIn = userInDB
-            return res.redirect("/")
         }
+        return res.redirect("/")
+
+        // const userInDB = await sessionServices.findUserEmail(req.body.email)
+
+        // if(!userInDB){
+        //     return res.render("login", {
+        //         errors: {
+        //             email: {
+        //                 msg: "Unregistered email"
+        //             }
+        //         }
+        //     })
+        // }
+
+        // if (!bcrypt.compareSync(req.body.password, userInDB.password)){
+        //     return res.render("login", {
+        //         errors: {
+        //             email: {
+        //                 msg: "Incorrect password"
+        //             }
+        //         }
+        //     })
+        // } else {
+        //     req.session.userLoggedIn = userInDB
+        //     return res.redirect("/")
+        // }
     },
 
     proyectCreateProcess: (req, res) => {

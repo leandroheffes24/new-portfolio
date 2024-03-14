@@ -13,7 +13,6 @@
 }
 
 body{
-    background-image: url("/img/background.png");
     background-position-x: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -128,6 +127,10 @@ a{
 
 .homeSection{
     height: 100vh;
+    background-image: url('/img/homeBackground.webp');
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .homeInformation{
@@ -171,6 +174,7 @@ a{
 
 .proyectsSection{
     padding: 40px 20px;
+    background-image: url("/img/background.webp");
 }
 
 .proyectsContainer{
@@ -287,6 +291,7 @@ a{
 
 .aboutMeSection{
     padding: 40px 20px;
+    background-image: url("/img/background.webp");
 }
 
 .aboutMeContainer{
@@ -395,6 +400,7 @@ a{
 
 .contactSection{
     padding: 40px 20px;
+    background-image: url("/img/background.webp");
 }
 
 .contactForm{
@@ -492,6 +498,14 @@ footer{
 }
 
 /* --------------------------- LOGIN --------------------------- */
+
+.loginBody{
+    background-image: url('/img/homeBackground.webp');
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: gray;
+}
 
 .loginForm{
     position: absolute;
