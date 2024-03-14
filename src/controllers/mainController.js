@@ -54,8 +54,10 @@ module.exports = {
                     }
                 }
             })
+        } else {
+            req.session.userLoggedIn = user
+            return res.redirect("/")
         }
-        return res.redirect("/")
     },
 
     proyectCreateProcess: (req, res) => {

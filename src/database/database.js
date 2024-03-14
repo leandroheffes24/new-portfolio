@@ -1,5 +1,5 @@
-const proyects = require("./models/proyects")
-const users = require("./models/users")
+const proyects = require("./services/proyects")
+const users = require("./services/users")
 
 const database = {
     proyects,
