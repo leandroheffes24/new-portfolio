@@ -6,7 +6,7 @@ const { v4: uuidv4 } = require('uuid');
 
 module.exports = {
     index: (req, res) => {
-        fetch('https://leandro-heffes.vercel.app/api/proyects')
+        fetch(window.location.href + "/api/proyects")
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
