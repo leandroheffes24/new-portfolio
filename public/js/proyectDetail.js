@@ -1,4 +1,4 @@
-fetch('http://localhost:3024/api/proyects')
+fetch('https://leandro-heffes.vercel.app/api/proyects')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
