@@ -6,17 +6,8 @@ const { v4: uuidv4 } = require('uuid');
 
 module.exports = {
     index: (req, res) => {
-        fetch(window.location.href + "/api/proyects")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            const proyects = proyectsServices.getProyects()
-            return res.render("index", {proyects, data})
-        })
+        const proyects = proyectsServices.getProyects()
+        return res.render("index", {proyects})
     },
 
     login: (req, res) => {
