@@ -6,8 +6,17 @@ const { v4: uuidv4 } = require('uuid');
 
 module.exports = {
     index: (req, res) => {
-        const proyects = proyectsServices.getProyects()
-        return res.render("index", {proyects})
+        fetch('https://leandro-heffes.vercel.app/api/proyects')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const proyects = proyectsServices.getProyects()
+            return res.render("index", {proyects, data})
+        })
     },
 
     login: (req, res) => {
