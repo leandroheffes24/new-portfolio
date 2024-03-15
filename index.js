@@ -20,7 +20,7 @@ const cors = require("cors");
 app.use(
     cors(
         (corsOptions = {
-        origin: "*",
+        origin: "https://leandroheffes-portfolio.vercel.app",
         })
     )
 );
