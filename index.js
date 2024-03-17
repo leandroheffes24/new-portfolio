@@ -14,17 +14,6 @@ const sessionExists = require("./src/middlewares/sessionExists")
 
 const app = express()
 
-// -------------------- CORS --------------------
-
-const cors = require("cors");
-app.use(
-    cors(
-        (corsOptions = {
-        origin: "*",
-        })
-    )
-);
-
 // -------------------- SETTINGS --------------------
 
 app.set("view engine", "ejs")
@@ -48,6 +37,17 @@ app.use(sessionExists)
 
 app.use(mainRouter)
 app.use(error404Middleware)
+
+// -------------------- CORS --------------------
+
+const cors = require("cors");
+app.use(
+    cors(
+        (corsOptions = {
+        origin: "*",
+        })
+    )
+);
 
 // -------------------- SERVER --------------------
 
