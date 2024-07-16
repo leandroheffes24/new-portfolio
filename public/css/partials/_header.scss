@@ -228,17 +228,10 @@ header::after {
 }
 
 /* Language selector */
-.headerLanguagesContainer{
-    
-}
 
 .headerLanguagesSelect{
     border-radius: 20px;
     padding: 5px;
-}
-
-.headerLanguageOption{
-
 }
 
 /* Menu */
@@ -249,4 +242,164 @@ header::after {
 
 .headerOpenMenuIcon{
     width: 34px;
+}
+
+/* Navbar */
+
+.headerNavbar{
+    display: none;
+    background-color: $backgroundSecondaryColor;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    padding: 7px 15px;
+    z-index: 1;
+    box-shadow: 0px 0px 0px 2000px rgba(0, 0, 0, 0.4);
+}
+
+.headerNavbarCloseMenuIconContainer{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 70px;
+}
+
+.headerNavbarCloseMenuIcon{
+    width: 34px;
+    text-align: right;
+}
+
+.headerNavbarList{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.headerNavbarItemList{
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* ---------------------- TABLET VIEW ---------------------- */
+
+@media (width >= 768px){
+    header{
+        padding: 15px 30px;
+    }
+
+    .headerLightAndDarkThemeAndLanguagesContainer{
+        gap: 30px;
+    }
+
+    /* Language selector */
+
+    .headerLanguagesSelect{
+        padding: 3px 10px;
+        font-size: 1rem;
+    }
+
+    /* Menu */
+
+    .headerOpenMenuIcon{
+        width: 42px;
+    }
+
+    /* Navbar */
+
+    .headerNavbar{
+        width: 40%;
+        padding: 15px 30px;
+    }
+
+    .headerNavbarCloseMenuIconContainer{
+        margin-bottom: 130px;
+    }
+
+    .headerNavbarCloseMenuIcon{
+        width: 42px;
+    }
+
+    .headerNavbarList{
+        gap: 45px;
+    }
+
+    .headerNavbarItemList{
+        font-size: 1.4rem;
+    }
+}
+
+/* ---------------------- DESKTOP 992PX WIDTH VIEW ---------------------- */
+
+@media (width >= 992px){
+    header{
+        padding: 8px 25px;
+    }
+
+    .headerLightAndDarkThemeAndLanguagesContainer{
+        width: 20%;
+    }
+
+    /* Language selector */
+
+    .headerLanguagesSelect{
+        font-size: .9rem;
+    }
+
+    /* Menu */
+
+    .headerOpenMenuIconContainer{
+        display: none;
+    }
+
+    /* Navbar */
+
+    .headerNavbar{
+        display: block;
+        background-color: none;
+        position: static;
+        right: none;
+        top: none;
+        width: 75%;
+        height: auto;
+        padding: 0;
+        z-index: 1;
+        box-shadow: none;
+    }
+
+    .headerNavbarCloseMenuIconContainer{
+        display: none;
+    }
+
+    .headerNavbarList{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: right;
+        gap: 25px;
+    }
+
+    .headerNavbarItemList{
+        font-size: .7rem;
+    }
+}
+
+/* ---------------------- DESKTOP VIEW ---------------------- */
+
+@media (width >= 992px){
+    header{
+        padding: 10px 35px;
+    }
+
+    /* Navbar */
+
+    .headerNavbarList{
+        gap: 35px;
+    }
+
+    .headerNavbarItemList{
+        font-size: .8rem;
+    }
 }
