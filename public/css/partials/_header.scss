@@ -50,6 +50,7 @@ header::after {
 .headerSelectedLanguage{
     border-radius: 50%;
     width: 22px;
+    cursor: pointer;
 }
 
 .headerLanguagesContainer{
@@ -189,8 +190,7 @@ header::after {
     }
 
     .headerTitleContainer{
-        border: 1px solid red;
-        width: 20%;
+        width: auto;
     }
     
     .headerTitle{
@@ -199,15 +199,25 @@ header::after {
     }
     
     .headerLanguageAndMenuIconContainer{
-        display: flex;
-        justify-content: right;
-        gap: 20px;
-        width: 5%;
+        width: auto;
     }
 
     /* Language selector */
 
-    
+    .headerSelectedLanguage{
+        width: 18px;
+    }
+
+    .headerLanguagesContainer{
+        gap: 18px;
+        padding: 9px;
+        margin-top: 25px;
+    }
+
+    .headerLanguage{
+        width: 16px;
+        cursor: pointer;
+    }
 
     /* Menu */
 
@@ -226,7 +236,6 @@ header::after {
         width: 75%;
         height: auto;
         padding: 0;
-        z-index: 1;
         box-shadow: none;
     }
 
@@ -242,15 +251,33 @@ header::after {
     }
 
     .headerNavbarItemList{
-        font-size: .7rem;
+        font-size: .65rem;
+        position: relative;
+    }
+
+    .headerNavbarItemListLink::after{
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(to right, #a628d9, #ffa000);
+        transition: width .3s ease, opacity .3s ease;
+        opacity: 0;
+    }
+
+    .headerNavbarItemListLink:hover::after {
+        width: 100%;
+        opacity: 1;
     }
 }
 
 /* ---------------------- DESKTOP VIEW ---------------------- */
 
-@media (width >= 992px){
+@media (width >= 1200px){
     header{
-        padding: 10px 35px;
+        padding: 15px 35px;
     }
 
     /* Navbar */
