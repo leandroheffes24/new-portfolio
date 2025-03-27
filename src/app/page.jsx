@@ -1,3 +1,4 @@
+import BannerSection from "./components/BannerSection/BannerSection";
 import Header from "./components/Header/Header";
 
 export default function Home() {
@@ -5,7 +6,7 @@ export default function Home() {
     <>
       <Header/>
       <main>
-        
+        <BannerSection/>
       </main>
     </>
   );

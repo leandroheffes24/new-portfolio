@@ -1,0 +1,50 @@
+.navbarContainer {
+  border: 1px solid red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  background-color: rgb(250, 250, 250);
+  display: flex;
+}
+
+.navbarTextContainer {
+  background-color: rgb(210, 210, 210);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+.navbarText {
+  transform: rotate(-0.25turn);
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: rgb(170, 170, 170);
+}
+
+.navbar {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+  gap: 25px;
+  color: rgb(170, 170, 170);
+}
+
+.navbarLink {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.closeNavbarIconContainer {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.closeNavbarIcon {
+  width: 35px;
+}/*# sourceMappingURL=MobileNavbar.module.css.map */
