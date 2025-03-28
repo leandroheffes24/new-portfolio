@@ -7,7 +7,7 @@ import DesktopNavbar from './DesktopNavbar/DesktopNavbar'
 export default function Header(){
     const [isNavbarOpen, setIsNavbarOpen] = useState(true)
 
-    const toggleNavbar = () => {
+    const toggleNavbar = async () => {
         setIsNavbarOpen(!isNavbarOpen)
     }
 
@@ -26,7 +26,7 @@ export default function Header(){
                 <DesktopNavbar/>
             </header>
 
-            {isNavbarOpen && <MobileNavbar toggleNavbar={toggleNavbar}/>}
+            <MobileNavbar toggleNavbar={toggleNavbar} isNavbarOpen={isNavbarOpen}/>
         </>
     )
 }

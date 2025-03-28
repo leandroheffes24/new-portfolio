@@ -11,4 +11,14 @@
 .openNavbarIcon {
   width: 30px;
   display: flex;
+}
+
+@media (width >= 768px) {
+  .header {
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
+    padding: 10px;
+  }
+  .openNavbarIcon {
+    width: 45px;
+  }
 }/*# sourceMappingURL=Header.module.css.map */
