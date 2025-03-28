@@ -5,5 +5,15 @@
 @media (width >= 992px) {
   .navbar {
     display: flex;
+    width: 60%;
+    justify-content: space-between;
+  }
+  .navbarLink {
+    font-size: 0.9rem;
+  }
+}
+@media (width >= 1200px) {
+  .navbar {
+    width: 55%;
   }
 }/*# sourceMappingURL=DesktopNavbar.module.css.map */

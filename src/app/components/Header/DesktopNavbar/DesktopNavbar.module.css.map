@@ -1,1 +1,1 @@
-{"version":3,"sources":["DesktopNavbar.module.scss","DesktopNavbar.module.css"],"names":[],"mappings":"AAAA;EACI,aAAA;ACCJ;;ADEA;EACI;IACI,aAAA;ECCN;AACF","file":"DesktopNavbar.module.css"}
+{"version":3,"sources":["DesktopNavbar.module.scss","DesktopNavbar.module.css"],"names":[],"mappings":"AAAA;EACI,aAAA;ACCJ;;ADEA;EACI;IACI,aAAA;IACA,UAAA;IACA,8BAAA;ECCN;EDEE;IACI,iBAAA;ECAN;AACF;ADGA;EACI;IACI,UAAA;ECDN;AACF","file":"DesktopNavbar.module.css"}
