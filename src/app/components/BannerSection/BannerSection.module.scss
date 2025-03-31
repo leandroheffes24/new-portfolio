@@ -1,8 +1,23 @@
-.bannerSection{
-    
-}
-
 .banner{
     width: 100%;
-    height: auto;
+    height: 150px;
+    object-fit: cover;
+}
+
+@media(width>=768px){
+    .banner{
+        height: 200px;
+    }
+}
+
+@media(width>=992px){
+    .banner{
+        height: 160px;
+    }
+}
+
+@media(width>=1200px){
+    .banner{
+        height: 230px;
+    }
 }

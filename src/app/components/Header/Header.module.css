@@ -6,6 +6,7 @@
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
   padding: 10px 0;
   z-index: 10;
+  background-color: rgba(80, 36, 209, 0.302);
 }
 
 .headerContainer {

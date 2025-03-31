@@ -49,9 +49,6 @@
   }
 }
 @media (width >= 1200px) {
-  .navbar {
-    width: 55%;
-  }
   .linkIcon {
     width: 23px;
   }
