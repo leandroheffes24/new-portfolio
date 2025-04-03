@@ -1,66 +1,48 @@
 @import '../../scss/variables.scss';
 
-.header{
-    position: sticky;
-    top: 0;
-    backdrop-filter: blur(6px);
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
-    padding: 10px 0;
-    z-index: 10;
-    background-color: $violetTranparent;
-}
-
-.headerContainer{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    width: 95%;
-    margin: auto;
-}
-
 .openNavbarIcon{
-    width: 30px;
-    display: flex;
+    position: fixed;
+    top: 5px;
+    left: 7px;
+    width: 40px;
+    transform: scaleX(-1);
 }
 
-.titleLink{
-    font-size: 1.25rem;
-    font-weight: 600;
+.header{
+    display: none;
 }
 
 @media(width>=768px){
-    .header{
-        box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
-        padding: 10px 0;
-    }
-
-    .headerContainer{
-        gap: 35px;
-    }
-
     .openNavbarIcon{
-        width: 45px;
-    }
-
-    .titleLink{
-        font-size: 1.8rem;
-        font-weight: 700;
+        width: 55px;
     }
 }
 
 @media(width>=992px){
+    .openNavbarIcon{
+        display: none;
+    }
+
     .header{
+        display: flex;
+        justify-content: space-between;
         padding: 12px 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        backdrop-filter: blur(6px);
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+        padding: 10px 0;
+        z-index: 10;
     }
 
     .headerContainer{
-        gap: 0;
+        display: flex;
         justify-content: space-between;
+        align-items: center;
         max-width: 1800px;
-    }
-
-    .openNavbarIconContainer{
-        display: none;
+        width: 95%;
+        margin: auto;
     }
 
     .titleLink{
