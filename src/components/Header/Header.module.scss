@@ -1,0 +1,18 @@
+@import '../../scss/variables.scss';
+
+.openNavIcon{
+    width: 40px;
+    position: fixed;
+    transform: scaleX(-1);
+    color: $secondary;
+    top: 8px;
+    left: 10px;
+}
+
+@media(width>=768px){
+    .openNavIcon{
+        width: 60px;
+        top: 12px;
+        left: 18px;
+    }
+}

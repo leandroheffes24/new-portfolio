@@ -1,0 +1,16 @@
+.openNavIcon {
+  width: 40px;
+  position: fixed;
+  transform: scaleX(-1);
+  color: #64FFDA;
+  top: 8px;
+  left: 10px;
+}
+
+@media (width >= 768px) {
+  .openNavIcon {
+    width: 60px;
+    top: 12px;
+    left: 18px;
+  }
+}/*# sourceMappingURL=Header.module.css.map */

@@ -1,0 +1,94 @@
+@import '../../scss/variables.scss';
+
+.homeSection{
+    height: 100vh;
+    background-image: url('../../assets/homeBackground.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    mask-image: linear-gradient(
+        black 80%,
+        transparent
+    );
+    position: relative;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.textContainer{
+    width: 100vw;
+}
+
+.textContainer h1{
+    font-size: 4rem;
+    line-height: 3.6rem;
+    font-weight: 900;
+    color: $primaryText;
+}
+
+.textContainer h2{
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 15px;
+    color: $secondaryText;
+}
+
+.linksContainer{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.linksContainer a{
+    border: 1px solid $secondaryText;
+    width: 180px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $primaryText;
+    padding: 7px;
+    border-radius: 10px;
+    transition: .4s all;
+}
+
+.linksContainer a:hover{
+    background-color: $secondary;
+    border: 1px solid $secondary;
+    transition: .4s all;
+    color: black;
+}
+
+@media(width>=768px){
+    .textContainer h1{
+        font-size: 7rem;
+        line-height: 6.5rem;
+    }
+
+    .textContainer h2{
+        font-size: 2.3rem;
+        margin-top: 20px;
+    }
+
+    .linksContainer{
+        margin-top: 75px;
+        gap: 45px;
+    }
+
+    .linksContainer a{
+        border: 3px solid $secondaryText;
+        width: 320px;
+        font-size: 1.5rem;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .linksContainer a:hover{
+        border: 3px solid $secondary;
+    }
+}
